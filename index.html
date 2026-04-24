@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1b2a4e" />
+  <meta name="description" content="Hulp bij het begrijpen, beantwoorden en opstellen van Nederlandse brieven en e-mails. Voor particulieren en expats." />
+  <title>Brievenhulp — Nederlandse brieven en e-mails begrijpen en beantwoorden</title>
+
+  <!-- Typografie -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Instrument+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ HEADER / NAVIGATIE ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#top" class="logo" aria-label="Brievenhulp — naar home">
+        <span class="logo-mark" aria-hidden="true">
+          <!-- subtiel envelop-icoon -->
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="5" width="18" height="14" rx="2.5"/>
+            <path d="M3.5 7.5l8.5 6 8.5-6"/>
+          </svg>
+        </span>
+        <span class="logo-text">Brievenhulp</span>
+      </a>
+
+      <nav class="nav-desktop" aria-label="Hoofdmenu">
+        <a href="#situaties" data-i18n="nav.help">Hulp</a>
+        <a href="#diensten" data-i18n="nav.services">Diensten</a>
+        <a href="#keuzehulp" data-i18n="nav.calculator">Keuzehulp</a>
+        <a href="#tarieven" data-i18n="nav.pricing">Tarieven</a>
+        <a href="#abonnementen" data-i18n="nav.subscriptions">Abonnementen</a>
+        <a href="#portaal" data-i18n="nav.portal">Klantportaal</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-divider" aria-hidden="true">/</span>
+          <button class="lang-btn" data-lang="nl" aria-pressed="false">NL</button>
+        </div>
+        <a href="#keuzehulp" class="btn btn-primary btn-small hide-mobile" data-i18n="nav.cta">Start</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu openen" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobiele navigatie -->
+    <div class="nav-mobile" id="navMobile" aria-hidden="true">
+      <nav aria-label="Mobiel menu">
+        <a href="#situaties" data-i18n="nav.help">Hulp</a>
+        <a href="#diensten" data-i18n="nav.services">Diensten</a>
+        <a href="#keuzehulp" data-i18n="nav.calculator">Keuzehulp</a>
+        <a href="#tarieven" data-i18n="nav.pricing">Tarieven</a>
+        <a href="#abonnementen" data-i18n="nav.subscriptions">Abonnementen</a>
+        <a href="#portaal" data-i18n="nav.portal">Klantportaal</a>
+        <a href="#keuzehulp" class="btn btn-primary btn-full" data-i18n="hero.cta1">Ik heb hulp nodig</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="eyebrow" data-i18n="hero.eyebrow">Persoonlijke brievenhulp</span>
+          <h1 class="display" data-i18n="hero.title">
+            Een Nederlandse brief ontvangen <em>waar u niet uitkomt?</em>
+          </h1>
+          <p class="lede" data-i18n="hero.sub">
+            Wij helpen met het begrijpen, beantwoorden en opstellen van Nederlandse brieven en e-mails — rustig, duidelijk en zonder juridisch jargon.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#keuzehulp" class="btn btn-primary" data-i18n="hero.cta1">Ik heb hulp nodig</a>
+            <a href="#tarieven" class="btn btn-ghost" data-i18n="hero.cta2">Bekijk prijzen</a>
+          </div>
+
+          <ul class="trust-row" aria-label="Wat u van ons mag verwachten">
+            <li data-i18n="hero.trust1">Geen juridisch advies</li>
+            <li data-i18n="hero.trust2">Wel duidelijke, professionele hulp</li>
+            <li data-i18n="hero.trust3">Veilig account</li>
+            <li data-i18n="hero.trust4">Persoonlijke ondersteuning</li>
+          </ul>
+        </div>
+
+        <figure class="hero-media">
+          <div class="hero-photo" role="img" aria-label="Envelop op een houten tafel"></div>
+          <figcaption class="hero-badge">
+            <span class="dot" aria-hidden="true"></span>
+            <span data-i18n="hero.badge">Reactie meestal binnen 1 werkdag</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ HERKENBARE SITUATIES ============ -->
+    <section class="situations" id="situaties">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="sit.eyebrow">Herkenbare situaties</span>
+          <h2 class="display" data-i18n="sit.title">Waarmee kunnen wij helpen?</h2>
+          <p class="section-sub" data-i18n="sit.sub">
+            Een greep uit de vragen die we het vaakst krijgen. Herkent u er een? Dan komt u bij ons goed terecht.
+          </p>
+        </header>
+
+        <ul class="sit-grid">
+          <li class="sit-card">
+            <span class="sit-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 26V13l10-7 10 7v13"/><path d="M11 26v-8h10v8"/>
+              </svg>
+            </span>
+            <h3 data-i18n="sit.1.t">Brief van de gemeente</h3>
+            <p data-i18n="sit.1.d">Een aanslag, vergunning of aanvraag die onduidelijk is? Wij leggen uit wat er staat en wat u moet doen.</p>
+          </li>
+
+          <li class="sit-card">
+            <span class="sit-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="5" y="7" width="22" height="18" rx="2"/><path d="M9 12h14M9 17h14M9 22h8"/>
+              </svg>
+            </span>
+            <h3 data-i18n="sit.2.t">Belastingbrief</h3>
+            <p data-i18n="sit.2.d">Aanslag, toeslag of herinnering? We helpen u de brief te begrijpen en, indien gewenst, te reageren.</p>
+          </li>
+
+          <li class="sit-card">
+            <span class="sit-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M6 22V10a2 2 0 0 1 2-2h8l6 6v8a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2z"/><path d="M16 8v6h6"/>
+              </svg>
+            </span>
+            <h3 data-i18n="sit.3.t">Werkgever of verhuurder</h3>
+            <p data-i18n="sit.3.d">Een formele reactie nodig op een e-mail van uw werkgever, HR of verhuurder? Wij formuleren het helder en netjes.</p>
+          </li>
+
+          <li class="sit-card">
+            <span class="sit-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 4l3 6 6 1-4.5 4.5L22 22l-6-3-6 3 1.5-6.5L7 11l6-1z"/>
+              </svg>
+            </span>
+            <h3 data-i18n="sit.4.t">Klachtbrief sturen</h3>
+            <p data-i18n="sit.4.d">Niet tevreden over een dienst, product of behandeling? We schrijven een nette, zakelijke klacht die serieus wordt genomen.</p>
+          </li>
+
+          <li class="sit-card">
+            <span class="sit-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 8h24v16H4z"/><path d="M4 8l12 9 12-9"/>
+              </svg>
+            </span>
+            <h3 data-i18n="sit.5.t">Nederlandse brief beantwoorden</h3>
+            <p data-i18n="sit.5.d">U weet wat er moet komen, maar niet hoe. Wij maken een formeel en correct Nederlands antwoord.</p>
+          </li>
+
+          <li class="sit-card">
+            <span class="sit-icon" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="16" cy="16" r="11"/><path d="M5 16h22M16 5c3 3.5 4.5 7 4.5 11s-1.5 7.5-4.5 11c-3-3.5-4.5-7-4.5-11S13 8.5 16 5z"/>
+              </svg>
+            </span>
+            <h3 data-i18n="sit.6.t">Hulp voor expats</h3>
+            <p data-i18n="sit.6.d">Dutch correspondence from the municipality, tax office or landlord — translated, explained and answered in clear terms.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ DIENSTENBLOK ============ -->
+    <section class="services section-cream" id="diensten">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="srv.eyebrow">Diensten</span>
+          <h2 class="display" data-i18n="srv.title">Korte, heldere opties</h2>
+          <p class="section-sub" data-i18n="srv.sub">
+            Kies wat past bij uw vraag. Twijfelt u? Gebruik de keuzehulp hieronder.
+          </p>
+        </header>
+
+        <div class="srv-grid">
+          <article class="srv-card">
+            <div class="srv-num">01</div>
+            <h3 data-i18n="srv.1.t">Brief uitleggen</h3>
+            <p data-i18n="srv.1.d">U stuurt de brief, wij sturen een heldere uitleg in uw eigen woorden — plus wat er van u verwacht wordt.</p>
+            <div class="srv-price"><span data-i18n="common.from">vanaf</span> <strong>€45</strong></div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-num">02</div>
+            <h3 data-i18n="srv.2.t">Brief beantwoorden</h3>
+            <p data-i18n="srv.2.d">Wij schrijven namens u een passend, zakelijk antwoord in correct Nederlands.</p>
+            <div class="srv-price"><span data-i18n="common.from">vanaf</span> <strong>€95</strong></div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-num">03</div>
+            <h3 data-i18n="srv.3.t">Formele brief schrijven</h3>
+            <p data-i18n="srv.3.d">Van scratch een nette Nederlandse brief — voor gemeente, werkgever, school of instantie.</p>
+            <div class="srv-price"><span data-i18n="common.from">vanaf</span> <strong>€95</strong></div>
+          </article>
+
+          <article class="srv-card srv-featured">
+            <div class="srv-num">04</div>
+            <h3 data-i18n="srv.4.t">Klachtbrief of bezwaar</h3>
+            <p data-i18n="srv.4.d">Een zakelijke, feitelijke klacht of bezwaar die serieus genomen wordt. Rustig en helder geformuleerd.</p>
+            <div class="srv-price"><span data-i18n="common.from">vanaf</span> <strong>€95</strong></div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-num">05</div>
+            <h3 data-i18n="srv.5.t">Expat-hulp</h3>
+            <p data-i18n="srv.5.d">English-speaking support for Dutch letters and emails — from the Belastingdienst, gemeente, UWV or your landlord.</p>
+            <div class="srv-price"><span data-i18n="common.from">from</span> <strong>€95</strong></div>
+          </article>
+
+          <article class="srv-card">
+            <div class="srv-num">06</div>
+            <h3 data-i18n="srv.6.t">Complex dossier</h3>
+            <p data-i18n="srv.6.d">Meerdere brieven, langere correspondentie of een ingewikkelde situatie? Wij pakken het dossier in één keer aan.</p>
+            <div class="srv-price"><span data-i18n="common.from">vanaf</span> <strong>€395</strong></div>
+          </article>
+        </div>
+
+        <p class="srv-note">
+          <span data-i18n="srv.note">
+            Los telefoongesprek van 20 minuten: <strong>€35</strong>. Grote dossiers of langdurige ondersteuning: vanaf <strong>€850</strong>.
+          </span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ KEUZEHULP / CALCULATOR ============ -->
+    <section class="calculator" id="keuzehulp">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="calc.eyebrow">Keuzehulp</span>
+          <h2 class="display" data-i18n="calc.title">Welke hulp past bij u?</h2>
+          <p class="section-sub" data-i18n="calc.sub">
+            Drie korte vragen — daarna ziet u direct een indicatieve prijs.
+          </p>
+        </header>
+
+        <div class="calc-card" id="calcCard">
+
+          <!-- Stappenbalk -->
+          <ol class="calc-steps" aria-label="Voortgang">
+            <li class="is-active" data-step="1"><span>1</span><em data-i18n="calc.step1">Onderwerp</em></li>
+            <li data-step="2"><span>2</span><em data-i18n="calc.step2">Omvang</em></li>
+            <li data-step="3"><span>3</span><em data-i18n="calc.step3">Telefoon</em></li>
+            <li data-step="4"><span>✓</span><em data-i18n="calc.step4">Resultaat</em></li>
+          </ol>
+
+          <!-- Stap 1 -->
+          <div class="calc-panel is-active" data-panel="1">
+            <h3 data-i18n="calc.q1">Waar heeft u hulp bij nodig?</h3>
+            <div class="choice-grid">
+              <button class="choice" data-field="topic" data-value="begrijpen" data-price="45"><span data-i18n="calc.q1.a">Brief begrijpen</span></button>
+              <button class="choice" data-field="topic" data-value="beantwoorden" data-price="95"><span data-i18n="calc.q1.b">Brief beantwoorden</span></button>
+              <button class="choice" data-field="topic" data-value="klacht" data-price="95"><span data-i18n="calc.q1.c">Klachtbrief</span></button>
+              <button class="choice" data-field="topic" data-value="bezwaar" data-price="145"><span data-i18n="calc.q1.d">Bezwaar</span></button>
+              <button class="choice" data-field="topic" data-value="expat" data-price="95"><span data-i18n="calc.q1.e">Expat-hulp</span></button>
+              <button class="choice" data-field="topic" data-value="complex" data-price="395"><span data-i18n="calc.q1.f">Complex dossier</span></button>
+            </div>
+          </div>
+
+          <!-- Stap 2 -->
+          <div class="calc-panel" data-panel="2">
+            <h3 data-i18n="calc.q2">Hoe uitgebreid is uw vraag?</h3>
+            <div class="choice-grid choice-grid-3">
+              <button class="choice" data-field="size" data-value="kort" data-mult="1">
+                <strong data-i18n="calc.q2.a">Kort</strong>
+                <small data-i18n="calc.q2.a.d">Eén brief of e-mail</small>
+              </button>
+              <button class="choice" data-field="size" data-value="normaal" data-mult="1.5">
+                <strong data-i18n="calc.q2.b">Normaal</strong>
+                <small data-i18n="calc.q2.b.d">Een paar documenten</small>
+              </button>
+              <button class="choice" data-field="size" data-value="complex" data-mult="2.4">
+                <strong data-i18n="calc.q2.c">Complex</strong>
+                <small data-i18n="calc.q2.c.d">Meerdere brieven of lastige inhoud</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Stap 3 -->
+          <div class="calc-panel" data-panel="3">
+            <h3 data-i18n="calc.q3">Wilt u telefonisch contact?</h3>
+            <div class="choice-grid choice-grid-2">
+              <button class="choice" data-field="phone" data-value="ja" data-add="35">
+                <strong data-i18n="calc.q3.a">Ja, graag</strong>
+                <small data-i18n="calc.q3.a.d">Telefoongesprek van 20 minuten (+€35)</small>
+              </button>
+              <button class="choice" data-field="phone" data-value="nee" data-add="0">
+                <strong data-i18n="calc.q3.b">Nee, per e-mail is prima</strong>
+                <small data-i18n="calc.q3.b.d">Volledige afhandeling per e-mail</small>
+              </button>
+            </div>
+          </div>
+
+          <!-- Resultaat -->
+          <div class="calc-panel calc-result" data-panel="4">
+            <div class="result-inner">
+              <span class="eyebrow" data-i18n="calc.result.eyebrow">Verwachte prijs</span>
+              <div class="result-price">
+                <span data-i18n="common.from">vanaf</span>
+                <strong id="resultPrice">€95</strong>
+              </div>
+              <p class="result-desc" id="resultDesc" data-i18n="calc.result.desc">
+                Een indicatieve prijs op basis van uw keuzes. De definitieve prijs stellen we vast na het lezen van uw vraag — altijd eerst met bevestiging.
+              </p>
+              <div class="result-cta">
+                <a href="#portaal" class="btn btn-primary" data-i18n="calc.result.cta1">Account aanmaken en starten</a>
+                <button class="btn btn-ghost" id="calcRestart" data-i18n="calc.result.cta2">Opnieuw beginnen</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigatie -->
+          <div class="calc-nav">
+            <button class="btn btn-ghost btn-small" id="calcBack" disabled data-i18n="calc.back">Terug</button>
+            <span class="calc-progress"><em id="calcStepLabel">1</em> / 3</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TARIEVEN ============ -->
+    <section class="pricing section-cream" id="tarieven">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="price.eyebrow">Tarieven</span>
+          <h2 class="display" data-i18n="price.title">Rustige, heldere prijzen</h2>
+          <p class="section-sub" data-i18n="price.sub">
+            Vaste vanaf-prijzen, zonder verrassingen.
+          </p>
+        </header>
+
+        <ul class="price-list">
+          <li>
+            <span data-i18n="price.1">Brief uitleggen</span>
+            <em><span data-i18n="common.from">vanaf</span> <strong>€45</strong></em>
+          </li>
+          <li>
+            <span data-i18n="price.2">Formele brief of klacht</span>
+            <em><span data-i18n="common.from">vanaf</span> <strong>€95</strong></em>
+          </li>
+          <li>
+            <span data-i18n="price.3">Complex dossier</span>
+            <em><span data-i18n="common.from">vanaf</span> <strong>€395</strong></em>
+          </li>
+          <li>
+            <span data-i18n="price.4">Grote dossiers / langdurige ondersteuning</span>
+            <em><span data-i18n="common.from">vanaf</span> <strong>€850</strong></em>
+          </li>
+          <li>
+            <span data-i18n="price.5">Los telefoongesprek (20 minuten)</span>
+            <em><strong>€35</strong></em>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ ABONNEMENTEN ============ -->
+    <section class="subs" id="abonnementen">
+      <div class="container">
+        <header class="section-head section-head-narrow">
+          <span class="eyebrow" data-i18n="sub.eyebrow">Abonnementen</span>
+          <h2 class="display-sm" data-i18n="sub.title">Heeft u vaker hulp nodig?</h2>
+          <p class="section-sub" data-i18n="sub.sub">
+            Dan zijn onze abonnementen een rustiger keuze. Maandelijks opzegbaar.
+          </p>
+        </header>
+
+        <div class="subs-grid">
+          <article class="sub-card">
+            <header>
+              <h3 data-i18n="sub.basic.t">Basic</h3>
+              <div class="sub-price"><strong>€95</strong><span data-i18n="sub.permonth">per maand</span></div>
+            </header>
+            <ul>
+              <li data-i18n="sub.basic.1">Tot 2 documenten of vragen per maand</li>
+              <li data-i18n="sub.basic.2">Ondersteuning alleen via e-mail</li>
+              <li data-i18n="sub.basic.3">Reactie binnen 3 werkdagen</li>
+            </ul>
+            <a href="#portaal" class="btn btn-outline btn-full" data-plan="basic" data-i18n="sub.choose">Kies Basic</a>
+          </article>
+
+          <article class="sub-card sub-card-featured">
+            <span class="sub-badge" data-i18n="sub.popular">Populair</span>
+            <header>
+              <h3 data-i18n="sub.standard.t">Standard</h3>
+              <div class="sub-price"><strong>€225</strong><span data-i18n="sub.permonth">per maand</span></div>
+            </header>
+            <ul>
+              <li data-i18n="sub.standard.1">Tot 5 documenten of vragen per maand</li>
+              <li data-i18n="sub.standard.2">1 telefoongesprek van 20 minuten per maand</li>
+              <li data-i18n="sub.standard.3">Reactie binnen 2 werkdagen</li>
+            </ul>
+            <a href="#portaal" class="btn btn-primary btn-full" data-plan="standard" data-i18n="sub.choose">Kies Standard</a>
+          </article>
+
+          <article class="sub-card">
+            <header>
+              <h3 data-i18n="sub.premium.t">Premium</h3>
+              <div class="sub-price"><strong>€450</strong><span data-i18n="sub.permonth">per maand</span></div>
+            </header>
+            <ul>
+              <li data-i18n="sub.premium.1">Tot 10 documenten of vragen per maand</li>
+              <li data-i18n="sub.premium.2">2 telefoongesprekken van 20 minuten per maand</li>
+              <li data-i18n="sub.premium.3">Snellere service — voorrang in de planning</li>
+            </ul>
+            <a href="#portaal" class="btn btn-outline btn-full" data-plan="premium" data-i18n="sub.choose">Kies Premium</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOE HET WERKT ============ -->
+    <section class="how section-cream" id="werkwijze">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow" data-i18n="how.eyebrow">Werkwijze</span>
+          <h2 class="display" data-i18n="how.title">Hoe het werkt</h2>
+        </header>
+
+        <ol class="how-list">
+          <li><span class="how-num">1</span><h3 data-i18n="how.1.t">Kies een dienst of abonnement</h3><p data-i18n="how.1.d">Via de keuzehulp of direct op deze pagina.</p></li>
+          <li><span class="how-num">2</span><h3 data-i18n="how.2.t">Maak een account aan</h3><p data-i18n="how.2.d">Veilig met e-mail en wachtwoord. Niets meer dan dat.</p></li>
+          <li><span class="how-num">3</span><h3 data-i18n="how.3.t">Beschrijf uw vraag</h3><p data-i18n="how.3.d">In uw eigen woorden — we stellen gerichte vragen als we meer willen weten.</p></li>
+          <li><span class="how-num">4</span><h3 data-i18n="how.4.t">Plan eventueel een gesprek</h3><p data-i18n="how.4.d">20 minuten telefonisch — soms is dat prettiger dan schrijven.</p></li>
+          <li><span class="how-num">5</span><h3 data-i18n="how.5.t">Ontvang hulp per e-mail</h3><p data-i18n="how.5.d">Een heldere uitleg of een kant-en-klare brief. Altijd persoonlijk.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ KLANTPORTAAL ============ -->
+    <section class="portal" id="portaal">
+      <div class="container portal-inner">
+
+        <div class="portal-intro">
+          <span class="eyebrow" data-i18n="portal.eyebrow">Klantportaal</span>
+          <h2 class="display" data-i18n="portal.title">Uw eigen rustige omgeving</h2>
+          <p class="section-sub" data-i18n="portal.sub">
+            Maak een account aan om uw vraag in te dienen, uw abonnementstatus te zien en telefoongesprekken in te plannen. Geen dashboard vol statistieken — alleen wat u nodig heeft.
+          </p>
+
+          <figure class="portal-photo" role="img" aria-label="Notitieblok en telefoon op een lichte tafel"></figure>
+        </div>
+
+        <div class="portal-card" id="portalCard">
+          <!-- Auth (uitgelogd) -->
+          <div class="portal-auth" id="portalAuth">
+            <div class="tabs" role="tablist">
+              <button class="tab is-active" role="tab" data-tab="login" data-i18n="portal.tab.login">Inloggen</button>
+              <button class="tab" role="tab" data-tab="signup" data-i18n="portal.tab.signup">Account aanmaken</button>
+            </div>
+
+            <form class="portal-form is-active" data-form="login" novalidate>
+              <label>
+                <span data-i18n="portal.form.email">E-mailadres</span>
+                <input type="email" name="email" required autocomplete="email" placeholder="naam@voorbeeld.nl" />
+              </label>
+              <label>
+                <span data-i18n="portal.form.password">Wachtwoord</span>
+                <input type="password" name="password" required autocomplete="current-password" placeholder="••••••••" />
+              </label>
+              <button type="submit" class="btn btn-primary btn-full" data-i18n="portal.form.login">Inloggen</button>
+              <p class="portal-msg" data-msg></p>
+            </form>
+
+            <form class="portal-form" data-form="signup" novalidate>
+              <label>
+                <span data-i18n="portal.form.name">Naam</span>
+                <input type="text" name="name" required autocomplete="name" placeholder="Uw naam" />
+              </label>
+              <label>
+                <span data-i18n="portal.form.email">E-mailadres</span>
+                <input type="email" name="email" required autocomplete="email" placeholder="naam@voorbeeld.nl" />
+              </label>
+              <label>
+                <span data-i18n="portal.form.password">Wachtwoord</span>
+                <input type="password" name="password" required autocomplete="new-password" minlength="8" placeholder="Minimaal 8 tekens" />
+              </label>
+              <button type="submit" class="btn btn-primary btn-full" data-i18n="portal.form.signup">Account aanmaken</button>
+              <p class="portal-msg" data-msg></p>
+            </form>
+          </div>
+
+          <!-- Dashboard (ingelogd) -->
+          <div class="portal-dash" id="portalDash" hidden>
+            <div class="dash-welcome">
+              <span class="eyebrow" data-i18n="portal.dash.welcome">Welkom</span>
+              <h3 id="dashName">—</h3>
+            </div>
+
+            <div class="dash-status">
+              <div class="dash-row">
+                <span data-i18n="portal.dash.status">Abonnementstatus</span>
+                <em id="dashStatus" class="pill pill-ok" data-i18n="portal.dash.active">Actief</em>
+              </div>
+              <div class="dash-row">
+                <span data-i18n="portal.dash.plan">Abonnement</span>
+                <em id="dashPlan">Standard</em>
+              </div>
+              <div class="dash-row">
+                <span data-i18n="portal.dash.calls">Resterende gesprekken deze maand</span>
+                <em id="dashCalls">1</em>
+              </div>
+            </div>
+
+            <div class="dash-cta" id="dashCta">
+              <a href="#" class="btn btn-primary btn-full" id="dashBookCall" data-i18n="portal.dash.book">Plan uw telefoongesprek</a>
+            </div>
+
+            <div class="dash-empty" id="dashEmpty" hidden>
+              <p data-i18n="portal.dash.empty">Uw inbegrepen gesprekken voor deze maand zijn gebruikt.</p>
+              <a href="#" class="btn btn-outline btn-full" id="dashExtraCall" data-i18n="portal.dash.extra">Boek een extra gesprek voor €35</a>
+            </div>
+
+            <button class="portal-logout" id="portalLogout" data-i18n="portal.dash.logout">Uitloggen</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DISCLAIMER ============ -->
+    <section class="disclaimer">
+      <div class="container">
+        <p>
+          <strong data-i18n="disc.strong">Let op:</strong>
+          <span data-i18n="disc.text">Wij geven geen juridisch advies en zijn geen advocaat of jurist. Voor juridische stappen verwijzen wij u graag door.</span>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="logo logo-footer">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="5" width="18" height="14" rx="2.5"/>
+              <path d="M3.5 7.5l8.5 6 8.5-6"/>
+            </svg>
+          </span>
+          <span class="logo-text">Brievenhulp</span>
+        </a>
+        <p data-i18n="footer.tag">Rustige, menselijke hulp bij Nederlandse brieven en e-mails.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.h.contact">Contact</h4>
+        <ul>
+          <li><a href="mailto:hallo@brievenhulp.nl">hallo@brievenhulp.nl</a></li>
+          <li><a href="#portaal" data-i18n="footer.portal">Klantportaal</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.h.services">Diensten</h4>
+        <ul>
+          <li><a href="#diensten" data-i18n="footer.l.explain">Brief uitleggen</a></li>
+          <li><a href="#diensten" data-i18n="footer.l.reply">Brief beantwoorden</a></li>
+          <li><a href="#diensten" data-i18n="footer.l.complaint">Klacht of bezwaar</a></li>
+          <li><a href="#diensten" data-i18n="footer.l.expat">Expat-hulp</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.h.subs">Abonnementen</h4>
+        <ul>
+          <li><a href="#abonnementen">Basic</a></li>
+          <li><a href="#abonnementen">Standard</a></li>
+          <li><a href="#abonnementen">Premium</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="footer.h.legal">Juridisch</h4>
+        <ul>
+          <li><a href="#" data-i18n="footer.l.disclaimer">Disclaimer</a></li>
+          <li><a href="#" data-i18n="footer.l.privacy">Privacy</a></li>
+          <li><a href="#" data-i18n="footer.l.terms">Algemene voorwaarden</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <small>© <span id="year"></span> Brievenhulp</small>
+      <div class="lang-switch lang-switch-footer" role="group" aria-label="Language">
+        <button class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+        <span class="lang-divider" aria-hidden="true">/</span>
+        <button class="lang-btn" data-lang="nl" aria-pressed="false">NL</button>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Supabase JS via CDN. Vervang de URL en key in script.js door uw eigen waarden. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="script.js"></script>
+</body>
+</html>
