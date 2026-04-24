@@ -17,7 +17,7 @@
 /* Vervang deze drie waarden door uw eigen gegevens */
 const SUPABASE_URL       = "YOUR_SUPABASE_URL_HERE";
 const SUPABASE_ANON_KEY  = "YOUR_SUPABASE_ANON_KEY_HERE";
-const CALENDLY_URL       = "https://calendly.com/your-calendly-link";
+const CALENDLY_URL       = "https://calendly.com/lindadebre/20min";
 
 /* Mollie-betaallinks per abonnement en voor een los extra gesprek.
    Vervang door uw eigen Mollie Payment Links. */
