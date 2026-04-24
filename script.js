@@ -382,12 +382,12 @@ document.querySelectorAll(".lang-btn").forEach(btn => {
   });
 });
 
-/* Init taal: voorkeur > browser > nl */
+/* Init taal: voorkeur > browser > en (Engels is de nieuwe standaard) */
 (function initLang() {
-  let lang = "nl";
+  let lang = "en";
   try { lang = localStorage.getItem("bh_lang") || lang; } catch (_) {}
   if (!["nl", "en"].includes(lang)) {
-    lang = (navigator.language || "nl").toLowerCase().startsWith("en") ? "en" : "nl";
+    lang = (navigator.language || "en").toLowerCase().startsWith("nl") ? "nl" : "en";
   }
   applyLanguage(lang);
 })();
@@ -584,13 +584,24 @@ async function fetchProfile(user) {
 }
 
 /* Registratieformulier */
-document.querySelector('[data-form="signup"]').addEventListener("submit", async (e) => {
-  e.preventDefault();
-  const form = e.currentTarget;
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const password = form.password.value;
+const signupForm = document.querySelector('[data-form="signup"]');
+console.log("[auth] signup-form gevonden:", !!signupForm);
 
+signupForm?.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  console.log("[auth] signup submit aangeroepen");
+
+  const form = e.currentTarget;
+  const name = (form.querySelector('[name="name"]')?.value || "").trim();
+  const email = (form.querySelector('[name="email"]')?.value || "").trim();
+  const password = form.querySelector('[name="password"]')?.value || "";
+
+  console.log("[auth] signup data:", { name, email, passLength: password.length });
+
+  if (!name || !email) {
+    setMsg(form, "Vul alstublieft alle velden in.");
+    return;
+  }
   if (password.length < 8) {
     setMsg(form, "Wachtwoord moet minimaal 8 tekens zijn.");
     return;
@@ -618,23 +629,37 @@ document.querySelector('[data-form="signup"]').addEventListener("submit", async 
       }
       setMsg(form, "Account aangemaakt. Controleer uw e-mail om te bevestigen.", "success");
     } catch (err) {
+      console.error("[auth] Supabase signup error:", err);
       setMsg(form, "Er ging iets mis. Probeer het later opnieuw.");
     }
     return;
   }
 
   /* Fallback: demo-modus (localStorage) */
+  console.log("[auth] demo-modus: account aanmaken");
   demoUser = { name, email, plan: "standard", active: true, callsRemaining: 1 };
   saveDemoUser();
   renderDashboard(demoUser);
 });
 
 /* Loginformulier */
-document.querySelector('[data-form="login"]').addEventListener("submit", async (e) => {
+const loginForm = document.querySelector('[data-form="login"]');
+console.log("[auth] login-form gevonden:", !!loginForm);
+
+loginForm?.addEventListener("submit", async (e) => {
   e.preventDefault();
+  console.log("[auth] login submit aangeroepen");
+
   const form = e.currentTarget;
-  const email = form.email.value.trim();
-  const password = form.password.value;
+  const email = (form.querySelector('[name="email"]')?.value || "").trim();
+  const password = form.querySelector('[name="password"]')?.value || "";
+
+  console.log("[auth] login data:", { email, passLength: password.length });
+
+  if (!email || !password) {
+    setMsg(form, "Vul alstublieft uw e-mailadres en wachtwoord in.");
+    return;
+  }
 
   if (supabase) {
     try {
@@ -646,12 +671,14 @@ document.querySelector('[data-form="login"]').addEventListener("submit", async (
         renderDashboard({ name: email, plan: null, active: false, callsRemaining: 0 });
       }
     } catch (err) {
+      console.error("[auth] Supabase login error:", err);
       setMsg(form, "Er ging iets mis. Probeer het later opnieuw.");
     }
     return;
   }
 
   /* Fallback: demo */
+  console.log("[auth] demo-modus: inloggen");
   if (demoUser && demoUser.email === email) {
     renderDashboard(demoUser);
   } else {
